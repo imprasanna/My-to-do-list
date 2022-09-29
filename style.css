@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    font-size: 18px;
+    padding: 12px 8px 12px 40px;
+
+    /* Make the list items unselectable */
+    user-select: none;
+    -moz-user-select: none; /* For mozilla firefox */
+    -ms-user-select: none; /* For microsoft edge */
+    -webkit-user-select: none; /* For other browsers: chrome, opera, brave*/
+    list-style: none;
+}
+
+ul li:nth-child(odd) {
+    /* Set all odd list items to a different color (zebra-stripes) */
+    background: #f9f9f9;
+}
+
+ul li:hover {
+    /* Darker background on hover */
+    background: #ddd;
+}
+
+ul li.checked {
+    /* Strike out text and add darker background on clicking */
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    /* Add a checked mark when clicking on the list item */
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    transform: rotate(45deg);
+}
+
+.close {
+    /* Close button, added on adding a list item*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background: #f44336;
+    color: #fff;
+}
+
+.header {
+    /* Stylizing the header */
+    background-color: rgb(233, 99, 10);
+    padding: 60px 40px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.header > h2 {
+    position: absolute;
+    top: 30px;
+}
+
+/* Stylizing the input */
+input#my-input {
+    margin: 0;
+    border: 0;
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Stylizing the add button */
+span.add-button {
+    width: 25%;
+    background-color: #d9d9d9;
+    color: #555;
+    font-size: 1 rem;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    -moz-user-select: none; /* For mozilla firefox */
+    -ms-user-select: none; /* For microsoft edge */
+    -webkit-user-select: none; /* For other browsers: chrome, opera, brave*/
+}
+
+.add-button:hover {
+    background-color: #bbb;
+  }
